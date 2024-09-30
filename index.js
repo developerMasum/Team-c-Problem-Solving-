@@ -90,4 +90,55 @@ const findAndModify = function (people, name) {
   }
 };
 
-findAndModify(personArrOfObj, "John");
+// findAndModify(personArrOfObj, "John");
+
+// problem-6
+const sumOfEvenNumbers = (arr) => {
+  return arr.reduce((acc, num) => {
+    return num % 2 === 0 ? acc + num : acc;
+  }, 0);
+};
+
+const numbers = [1, 2, 3, 4, 5, 6];
+console.log(sumOfEvenNumbers(numbers));
+
+// problem-7
+const leapYearChecker = (year) => {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log("It's a leap year");
+  } else {
+    console.log("It's not a leap year");
+  }
+};
+leapYearChecker(2000);
+
+// problem-8
+const countVowels = (str) => {
+  const vowels = "aeiou";
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) !== -1) {
+      count++;
+    }
+  }
+  console.log(count);
+};
+countVowels("I am learning JavaScript");
+
+// problem-9
+
+const uniqueValues = (arr) => {
+  return [...new Set(arr)];
+};
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(uniqueValues(arr));
+
+// problem-10
+
+const findMaximumValue = (arr) => {
+  return Math.max(...arr);
+};
+
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(findMaximumValue(arr1));
